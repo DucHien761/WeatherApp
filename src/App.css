@@ -1,38 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+
+
+
 .App {
-  text-align: center;
+    color: #f1f2f3;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 520px;
+    min-height: 600px;
+    background: #161a2b;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    height: 100vh;
+    width: 100%;
+    color: #f1f2f3;
+    background-image: linear-gradient(180deg,rgba(50,94,189,.913603),rgba(25,107,138,.779149) 60%,rgba(0,172,255,.319765));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.main{
+    width: 100%;
+    border-radius: 15px;
+    background-color: #01579b;
+    /* column-count: 3; */
+    display :flex;
+    justify-content: space-around;
+    align-content: center;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.main .state-icons {
+    align-items: center;
+}
+
+
+.header{
+  
+    margin: 32px 0;
+    color: #fff;
+    font-size: 24px;
+
+    
+} 
+
+.weather-detail {
+ 
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 20px 20px;
+}
+
+
+.weather-summary {
   display: flex;
   flex-direction: column;
+  width: 520px;
+  min-height: 600px;
+  background: #01579b;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+.weather-detail .detail-col {
+  justify-content: flex-start;
+}
+
+
+.search-box .search-bar {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #f1f2f3;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.location-box .location {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  
+}
+
+.location-box detail-col-temp {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  display:inline-block;
+  margin-left: 40px;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
