@@ -6,7 +6,7 @@
     background-color: cornflowerblue;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     width: 520px;
     min-height: 600px;
     background: #161a2b;
@@ -24,7 +24,7 @@
 } 
 
  
-.main{
+.main {
     width: 100%;
     border-radius: 15px;
     background-color: #01579b;
@@ -32,18 +32,13 @@
     justify-content: space-around;
     align-content: center;
 
-} */
+} 
 
 
 
 
 
-/* .header{
-  
-    margin: 32px 0;
-    color: #fff;
-    font-size: 24px;  
-}  */
+
 
 .WeatherApp {
   display: flex;
@@ -56,7 +51,9 @@
   padding-bottom: 32px;
 }
 
-.search-box .search-bar {
+
+
+.search-box search-bar {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
   border: 2px solid #fbfcff;
@@ -65,29 +62,22 @@
   background: transparent;
   color: #fff;
   margin-top: 30px;
-  
-  
 }
 
-.location-box .location {
+
+
+.location {
   color: rgb(245, 240, 240);
   font-size: 32px;
   font-weight: 300;
   font-style: italic;
   text-align: center;
   
-  
 }
 
-.location-box detail-col-temp {
-  align-items: center;
-  display:inline-block;
-  margin-left: 40px;
-  text-align: center;
 
-}
 
-.location-box weather-detail {
+.weather-detail {
   align-items: center;
   display:flex;
   text-align: center;
@@ -101,3 +91,9 @@
   
 }
 
+.location-box {
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+}
