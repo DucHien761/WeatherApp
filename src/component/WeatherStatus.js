@@ -23,8 +23,8 @@ function WeatherStatus() {
         setQuery('');
         setWeather(result);
 
+        
         console.log(result);
-     
    
       
         });
@@ -45,11 +45,11 @@ function WeatherStatus() {
  
     return(
         
-
+<div className="WeatherStatus">
 
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
         <div className="container">
-        <div className='weather-summary'>
+        <div className='weather-main'>
    
         <div className="search-box">
             <input type="text"
@@ -60,6 +60,10 @@ function WeatherStatus() {
                    onKeyPress={search}
              />
           </div>
+
+
+
+
    </div>
 
    {(typeof weather.weather != "undefined") ? 
@@ -81,7 +85,16 @@ function WeatherStatus() {
                    )}
                  
              </div>
-   
+             <div className="state-icon">
+             <img  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
+             </div>
+            <div className="pressure">
+              <div className='col-main'>pressure:{weather.main.pressure}</div>
+              <div className='col-main'>humidity:{weather.main.humidity}</div>
+              <div className='col-main'>temp_max:{weather.main.temp_max}</div>
+              <div className='col-main'>temp_min:{weather.main.temp_min}</div>
+
+            </div>        
    
            </div>
            </div>) :  
@@ -95,8 +108,8 @@ function WeatherStatus() {
     </div>
    
        
-    )
-}
+    </div>   
+    )}
 
 
 export default WeatherStatus;

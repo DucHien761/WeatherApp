@@ -8,46 +8,73 @@ import WeatherDetail from './component/WeatherDetail';
 import LineChart from './component/Chart';
 import { UserData } from './component/Data';
 
-
+import 'chart.js/auto';
 
 
 function App() {
 
+  // const lables = UserData.map((data) => data.year);
+
   const [userData, setUserData] = useState({
 
-    lables: UserData.map((data) => data.year),
 
-    datasets: [
-      {
-      label: "Users Gained",
-      data: UserData.map((data) => data.userGain),
+
+    labels: UserData.map((data) => data.year),
+
+    datasets: [{
+      label: "User Gained",
+      data:   UserData.map((data) => data.userGain),
+        
       backgroundColor: [
-        "rgba(75,192,192,1)",
-        "#ecf0f1",
-        "#50AF95",
-        "#f3ba2f",
-        "#2a71d0",
+      'rgba(255, 99, 132, 0.2)',  
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
       ],
-      borderColor:"black",
+      
+      borderColor:[
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+      ],
       borderWidth:"2",
-    },
-  ],
-  });
+
+  }]
+  
+});
+  
+  
 
   
 
 
   return (
     <div className="WeatherApp">
+    <div className="Summary">
     <div className="WeatherStatus">
           <WeatherStatus  />
     </div>
     <div className="WeatherDetail">
           <WeatherDetail />
      </div>
-     <div key= {UserData.id } style ={{width : 700}} className="Chart">
-        <LineChart chartData={UserData}/>
+
+    </div>
+    
+
+
+     <div   className="Chart">
+        <LineChart chartData={userData}/>
      </div>
+
+
+
     </div>      
 
   );

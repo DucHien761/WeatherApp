@@ -1,38 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 
 
- .App {
-    color: #f1f2f3;
-    background-color: cornflowerblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 520px;
-    min-height: 600px;
-    background: #161a2b;
-    text-align: center;
-    margin: 128px auto;
-    border-radius: 10px;
-    padding-bottom: 32px;
-    
-} 
 
- .container {
-
-    color: #f1f2f3;
-    background-image: linear-gradient(180deg,rgba(50,94,189,.913603),rgba(25,107,138,.779149) 60%,rgba(0,172,255,.319765));
-} 
-
- 
-.main {
-    width: 100%;
-    border-radius: 15px;
-    background-color: #01579b;
-    display :flex;
-    justify-content: space-around;
-    align-content: center;
-
-} 
 
 
 
@@ -41,30 +10,76 @@
 
 
 .WeatherApp {
-  display: flex;
-  justify-content: start;
-  width: 520px;
-  min-height: 600px;
-  text-align: center;
-  margin: 128px auto;
-  border-radius: 10px;
-  padding-bottom: 32px;
-}
-
-
-
-.search-box search-bar {
-  padding: 14px 32px 14px 16px;
-  border-radius: 4px 0 0 4px;
-  border: 2px solid #fbfcff;
-  outline: none;
-  width: 320px;
-  background: transparent;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  height: 200vh;
+  width: 100%;
   color: #fff;
-  margin-top: 30px;
+  background-image: linear-gradient(180deg,rgba(50,94,189,.913603),rgba(25,107,138,.779149) 60%,rgba(0,172,255,.319765));
+
 }
 
 
+
+
+.Summary {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  flex-direction: column;
+  height: 60vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.weather-detail {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  display: flex;
+
+}
+
+.col-detail {
+  
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 25%;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(0deg,#fff,transparent) 1 100%;
+}
+
+.Chart {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  background-color: #fff;
+  position: relative;
+  max-width: 100%;
+  height: 40vh;
+  overflow: auto;
+}
+
+
+
+
+
+.weather-main {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 26px;
+}
 
 .location {
   color: rgb(245, 240, 240);
@@ -72,28 +87,39 @@
   font-weight: 300;
   font-style: italic;
   text-align: center;
-  
 }
 
-
-
-.weather-detail {
-  align-items: center;
-  display:flex;
+.search-bar {
+  color: rgb(12, 1, 1);
+  font-size: 20px;
+  font-weight: 100;                        
   text-align: center;
-  margin-left: 40px;
+}
+.date {
+  text-align: center  ;
+  font-size: 30px;
 }
 
-.weather-main  {
+.pressure {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
   display: flex;
-  align-items: center;
-  justify-content:space-between
-  
+  justify-content: center;
+  align-content: center;
+  font-size: 26px;
 }
 
-.location-box {
+.col-main {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
   display: flex;
-  text-align: center;
+  flex-direction: column;
   align-items: center;
-
+  justify-content: flex-start;
+  width: 25%;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(0deg,#fff,transparent) 1 100%;
 }
