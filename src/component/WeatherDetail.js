@@ -7,29 +7,29 @@ function WeatherDetail() {
 
     
     const api = {
-        key: "0cb082396847d1853b2313a5d96855a0",
+        key: "bde9f95555d3c5f1f74ca65c15176909",
         base: "https://api.openweathermap.org/data/2.5/"
       }
     
     
 
-  const [query, setQuery] = useState('');
-  const [weather, setWeather] = useState('');
-
-  const getData = () => {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-      .then(res => res.json())
-      .then(result => {
-
-            setWeather(result);
-            console.log(result);
-      });
-       }    
   
-// getData();
-useEffect(() => {
-    getData()
-  }, [])
+   const [weather, setWeather] = useState('');
+
+//   const getData = () => {
+//       fetch(`${api.base}&units=metric&APPID=${api.key}`)
+//       .then(res => res.json())
+//       .then(result => {
+
+//             setWeather(result);
+//             console.log(result);
+//       });
+//        }    
+
+
+// useEffect(() => {
+//     getData()
+//   }, [])
 
 
     return(

@@ -5,7 +5,7 @@ import {useState} from 'react';
 function WeatherStatus() {
   
     const api = {
-        key: "0cb082396847d1853b2313a5d96855a0",
+        key: "bde9f95555d3c5f1f74ca65c15176909",
         base: "https://api.openweathermap.org/data/2.5/"
       }
     
