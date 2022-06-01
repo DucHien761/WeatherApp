@@ -14,30 +14,26 @@ function WeatherDetail() {
     
 
   const [query, setQuery] = useState('');
-  const [weather, setWeather] = useState('')
+  const [weather, setWeather] = useState('');
 
-  const search = evt => {
-    if (evt.key === "Enter") {
+  const getData = () => {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
       .then(res => res.json())
       .then(result => {
 
-        setQuery('');
-        setWeather(result);
-        
-       
-        // console.log(result);
-      
-        });
-      }
-  }
-    // const [{weather}] = useAppContext();
+            setWeather(result);
+            console.log(result);
+      });
+       }    
+  
+
+
 
     return(
 
-<div className="WeatherDetail">
+<div className="Weather-Detail">
 
-   {( typeof weather.name != "undefined" )  ? (
+   {(  weather.name  !== "undefined" )  ? (
          <div className='weather-detail'>
                 <div className='col-detail'>
                     <div className='title-detail'> PSI</div>
@@ -46,11 +42,11 @@ function WeatherDetail() {
                 </div>
                 <div className='col-detail'>
                     <div className='title-detail'> RAIN</div>
-                    <div className='detail-value'>{weather.wind.deg}</div>
+                    <div className='detail-value'></div>
                     <div className='detail-state'>mm</div>
                 </div>
                 <div className='col-detail'>
-                    <div className='title-detail'> {weather.wind.speed} </div>
+                    <div className='title-detail'>sss {weather?.wind?.deg} </div>
                     <div className='circle-icon'></div>
                 </div>
                 <div className='col-detail'>
@@ -58,7 +54,7 @@ function WeatherDetail() {
                     <div className='add-text'>Add</div>
                 </div>
         </div>
-    ) : ('sss')
+    ) : ('aaaaa')
     }
 
     

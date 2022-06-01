@@ -75,7 +75,7 @@ function WeatherStatus() {
    
              <div className="weather-main">
                    { weather.weather.map((detail) => 
-                    <ul key={detail.toString()}>                 
+                    <ul key={detail.id}>                 
                        <div>{detail.main}</div>
                        <div>{detail.description}</div>   
                    </ul> 
