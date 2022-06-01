@@ -70,7 +70,7 @@ function App() {
 
 
      <div   className="Chart">
-        <LineChart chartData={userData}/>
+        <LineChart  chartData={userData}/>
      </div>
 
 

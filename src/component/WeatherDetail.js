@@ -34,30 +34,38 @@ function WeatherDetail() {
     // const [{weather}] = useAppContext();
 
     return(
-    <div className='weather-detail'>
-        <div className='col-detail'>
-            <div className='title-detail'> PSI</div>
-            <div className='detail-value psi'>{}</div>
-            <div className='detail-state'>Good</div>
-        </div>
-        <div className='col-detail'>
-            <div className='title-detail'> RAIN</div>
-            <div className='detail-value'>sssssss</div>
-            <div className='detail-state'>mm</div>
-        </div>
-        <div className='col-detail'>
-            <div className='title-detail'> DENGUE</div>
-            <div className='circle-icon'></div>
-        </div>
-        <div className='col-detail'>
-            <div className='add-icon'><i className="far fa-plus-circle fa-2x"></i></div>
-            <div className='add-text'>Add</div>
-        </div>
-    </div>
 
+<div className="WeatherDetail">
 
-    )
-}
+   {( typeof weather.name != "undefined" )  ? (
+         <div className='weather-detail'>
+                <div className='col-detail'>
+                    <div className='title-detail'> PSI</div>
+                    <div className='detail-value psi'>{}</div>
+                    <div className='detail-state'>Good</div>
+                </div>
+                <div className='col-detail'>
+                    <div className='title-detail'> RAIN</div>
+                    <div className='detail-value'>{weather.wind.deg}</div>
+                    <div className='detail-state'>mm</div>
+                </div>
+                <div className='col-detail'>
+                    <div className='title-detail'> {weather.wind.speed} </div>
+                    <div className='circle-icon'></div>
+                </div>
+                <div className='col-detail'>
+                    <div className='add-icon'><i className="far fa-plus-circle fa-2x"></i></div>
+                    <div className='add-text'>Add</div>
+                </div>
+        </div>
+    ) : ('sss')
+    }
+
+    
+            
+</div>
+
+    )}
 
 
 export default WeatherDetail;

@@ -60,13 +60,10 @@ function WeatherStatus() {
                    onKeyPress={search}
              />
           </div>
-
-
-
-
    </div>
 
-   {(typeof weather.weather != "undefined") ? 
+
+  {(typeof weather.weather != "undefined") ? 
            ( <div>
            <div className="location-box">   
            <div className='location'>
@@ -80,25 +77,30 @@ function WeatherStatus() {
                    { weather.weather.map((detail) => 
                     <ul key={detail.toString()}>                 
                        <div>{detail.main}</div>
-                       <div>{detail.description}</div>     
+                       <div>{detail.description}</div>   
                    </ul> 
-                   )}
-                 
+                   )}  
              </div>
-             <div className="state-icon">
-             <img  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
-             </div>
-            <div className="pressure">
-              <div className='col-main'>pressure:{weather.main.pressure}</div>
-              <div className='col-main'>humidity:{weather.main.humidity}</div>
-              <div className='col-main'>temp_max:{weather.main.temp_max}</div>
-              <div className='col-main'>temp_min:{weather.main.temp_min}</div>
 
-            </div>        
-   
+
+      <div className="state-icon">
+        <img  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
+      </div> 
+
+
+
+      <div className="pressure">
+        <div className='col-main'>pressure:{weather.main.pressure}</div>
+        <div className='col-main'>humidity:{weather.main.humidity}</div>
+        <div className='col-main'>temp_max:{weather.main.temp_max}</div>
+        <div className='col-main'>temp_min:{weather.main.temp_min}</div>
+      </div>        
+
+
+
            </div>
-           </div>) :  
-           ('')
+           </div>) :            
+          ('')
          }
    </div>
 

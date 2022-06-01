@@ -54,6 +54,7 @@
   border-width: 1px;
   border-style: solid;
   border-image: linear-gradient(0deg,#fff,transparent) 1 100%;
+  font-size: 30px;
 }
 
 .Chart {
@@ -122,4 +123,23 @@
   border-width: 1px;
   border-style: solid;
   border-image: linear-gradient(0deg,#fff,transparent) 1 100%;
+}
+
+
+.state-icon {
+  
+
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  align-self: center;
+  
+}
+
+
+.WeatherDetail {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  display: flex;
 }
