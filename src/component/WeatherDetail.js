@@ -11,25 +11,21 @@ function WeatherDetail() {
         base: "https://api.openweathermap.org/data/2.5/"
       }
     
-    
+    const [weather, setWeather] = useState('');
 
-  
-   const [weather, setWeather] = useState('');
-
-//   const getData = () => {
-//       fetch(`${api.base}&units=metric&APPID=${api.key}`)
-//       .then(res => res.json())
-//       .then(result => {
-
-//             setWeather(result);
-//             console.log(result);
-//       });
-//        }    
+    const getData = () => {
+        fetch(`${api.base}&units=metric&APPID=${api.key}`)
+        .then(res => res.json())
+        .then(result => {
+                setWeather(result);
+                console.log(result);
+        });
+        }    
 
 
-// useEffect(() => {
-//     getData()
-//   }, [])
+useEffect(() => {
+    getData()
+  }, [])
 
 
     return(
