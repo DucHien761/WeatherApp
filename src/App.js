@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import WeatherStatus from './component/WeatherStatus';
 import WeatherDetail from './component/WeatherDetail';
 
@@ -10,13 +10,19 @@ import { UserData } from './component/Data';
 
 import 'chart.js/auto';
 
+ import {ReferenceDataContext, ReferenceDataContextProvider} from './component/Context/ReferenceDataContext';
+
+
 
 function App() {
 
   // const lables = UserData.map((data) => data.year);
+    const {weather} = useContext(ReferenceDataContext)
+    
 
-  const [userData, setUserData] = useState({
 
+    const [userData, setUserData] = useState({
+   
 
 
     labels: UserData.map((data) => data.year),
@@ -62,19 +68,16 @@ function App() {
           <WeatherStatus  />
     </div>
     <div className="WeatherDetail">
+    <ReferenceDataContextProvider>
           <WeatherDetail />
+    </ReferenceDataContextProvider>
+          
      </div>
-
     </div>
-    
-
-
+  
      <div   className="Chart">
         <LineChart  chartData={userData}/>
      </div>
-
-
-
     </div>      
 
   );

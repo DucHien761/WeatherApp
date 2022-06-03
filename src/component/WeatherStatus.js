@@ -88,13 +88,13 @@ function WeatherStatus() {
       </div> 
 
 
-
+{/* 
       <div className="pressure">
         <div className='col-main'>pressure:{weather.main.pressure}</div>
         <div className='col-main'>humidity:{weather.main.humidity}</div>
         <div className='col-main'>temp_max:{weather.main.temp_max}</div>
         <div className='col-main'>temp_min:{weather.main.temp_min}</div>
-      </div>        
+      </div>         */}
 
 
 
@@ -104,6 +104,35 @@ function WeatherStatus() {
          }
    </div>
 
+
+
+<div className="Weather-Detail">
+
+      <div className='weather-detail'>
+             <div className='col-detail'>
+                 <div className='title-detail'> PSI</div>
+                 <div className='detail-value psi'>{}</div>
+                 <div className='detail-state'>Good</div>
+             </div>
+             <div className='col-detail'>
+                 <div className='title-detail'>  {
+                        Math.round(weather?.main?.temp_max)
+                   }</div>
+                 <div className='detail-value'></div>
+                 <div className='detail-state'>mm</div>
+             </div>
+             <div className='col-detail'>
+                 <div className='title-detail'>  {weather?.wind?.deg} </div>
+                 <div className='circle-icon'></div>
+             </div>
+             <div className='col-detail'>
+                 <div className='add-icon'><i className="far fa-plus-circle fa-2x"></i></div>
+                 <div className='add-text'>Add</div>
+             </div>
+     </div>
+
+ 
+</div>
          
       
         
