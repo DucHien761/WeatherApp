@@ -25,11 +25,13 @@ function App() {
    
 
 
-    labels: UserData.map((data) => data.year),
+    labels: UserData.map((data) => data.hour),
 
     datasets: [{
-      label: "User Gained",
-      data:   UserData.map((data) => data.userGain),
+      label: "Sunrise",
+      data:   UserData.map((data) => data.tide),
+
+      sun:   UserData.map((data) => data.sun),
         
       backgroundColor: [
       'rgba(255, 99, 132, 0.2)',  

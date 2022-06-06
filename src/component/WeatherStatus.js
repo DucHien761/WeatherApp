@@ -111,18 +111,19 @@ function WeatherStatus() {
       <div className='weather-detail'>
              <div className='col-detail'>
                  <div className='title-detail'> PSI</div>
-                 <div className='detail-value psi'>{}</div>
+                 <div className='detail-value psi'>10</div>
                  <div className='detail-state'>Good</div>
              </div>
              <div className='col-detail'>
-                 <div className='title-detail'>  {
+                 <div className='title-detail'> temp {
                         Math.round(weather?.main?.temp_max)
-                   }</div>
+                    }
+                   </div>
                  <div className='detail-value'></div>
-                 <div className='detail-state'>mm</div>
+                 <div className='detail-state'>F</div>
              </div>
              <div className='col-detail'>
-                 <div className='title-detail'>  {weather?.wind?.deg} </div>
+                 <div className='title-detail'> deg {weather?.wind?.deg} </div>
                  <div className='circle-icon'></div>
              </div>
              <div className='col-detail'>
