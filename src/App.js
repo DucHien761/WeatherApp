@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+
 import axios from 'axios'
 import React, {useContext, useState} from 'react';
 import WeatherStatus from './component/WeatherStatus';
@@ -65,23 +66,23 @@ function App() {
 
   return (
     <div className="WeatherApp">
-    <div className="Summary">
-    <div className="WeatherStatus">
-          <WeatherStatus  />
-    </div>
-    <div className="WeatherDetail">
-    <ReferenceDataContextProvider>
-          <WeatherDetail />
-    </ReferenceDataContextProvider>
-          
-     </div>
-    </div>
-  
-     <div   className="Chart">
-        <LineChart  chartData={userData}/>
-     </div>
-    </div>      
+      <div className="container">
+        <div className="Summary">
+          <div className="WeatherStatus">
+            <WeatherStatus />
+          </div>
+          <div className="WeatherDetail">
+            <ReferenceDataContextProvider>
+              <WeatherDetail />
+            </ReferenceDataContextProvider>
+          </div>
+        </div>
 
+        <div className="Chart">
+          <LineChart chartData={userData} />
+        </div>
+      </div>
+    </div>
   );
 }
 
