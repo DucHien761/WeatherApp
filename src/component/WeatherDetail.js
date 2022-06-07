@@ -41,6 +41,7 @@ function WeatherDetail() {
             <div className="col-detail">
               <div className="title-detail"> DEG </div>
               <div className="circle-icon"></div>
+              <div className="circle-review"></div>
             </div>
             <div className="col-detail">
               <div className="add-icon">
