@@ -24,10 +24,12 @@
         position: relative;
         cursor: pointer;
         width: 200px;
+
         .city-name {
             margin-right: 10px;
         }
     }
+
     .dropdown {
         display: none;
         width: 200px;
@@ -35,19 +37,22 @@
         background-color: rgb(73, 73, 73);
         position: absolute;
         bottom: -90px;
+
         .option {
             padding: 3px 10px;
         }
+
         .option:hover {
-            background-color: rgba(255,255,255,0.3);
+            background-color: rgba(255, 255, 255, 0.3);
         }
     }
+
     .show {
         display: block;
     }
 }
 
-@media screen and (max-height: 694px){
+@media screen and (max-height: 694px) {
     .header {
         height: 32px;
         padding: 8px 10px;
