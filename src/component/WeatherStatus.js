@@ -17,68 +17,58 @@ function WeatherStatus() {
         .then((result) => {
           setQuery("");
           setWeather(result);
-
           console.log(result);
         });
     }
   };
 
   return (
-    <div>
-      <div
-        className={
-          typeof weather.main != "undefined"
-            ? weather.main.temp > 16
-              ? "app warm"
-              : "app"
-            : "app"
-        }
-      >
-        <div className="Weather-search">
-          <div className="location">
-            {weather.name} {weather?.sys?.country}
-          </div>
+    <div className="main-status">
+      <div className="Weather-search">
+        <div className="location">
+          {weather.name} {weather?.sys?.country}
+        </div>
 
-          <div className="search-box">
-            <input
-              type="text"
-              className="search-bar"
-              placeholder="type the city"
-              onChange={(e) => setQuery(e.target.value)}
-              value={query}
-              onKeyPress={search}
-            />
-          </div>
-
-          {typeof weather.weather != "undefined" ? (
-            <div>
-              <div className="location-box">
-                <div className="weather-main">
-                  <div className="state-icon">
-                    <img
-                      src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-                      alt={weather.weather[0].description}
-                    />
-                  </div>
-                  <div className="main-title">
-                    {weather.weather.map((detail) => (
-                      <div  key={detail.id}>
-                          <div className="state">{detail.main}</div>
-                          <div className="detail">
-                            <span className="temp-status">{Math.round(weather.main.temp_max)}°C</span>
-                            <span className="deg-status">{weather?.wind?.deg}</span>
-                          </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
+        <div className="search-box">
+          <input
+            type="text"
+            className="search-bar"
+            placeholder="type the city"
+            onChange={(e) => setQuery(e.target.value)}
+            value={query}
+            onKeyPress={search}
+          />
         </div>
       </div>
+      {typeof weather.weather != "undefined" ? (
+        <div className="weather-search__detail">
+          <div className="weather-main">
+            <div className="state-icon">
+              <img
+                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                alt={weather.weather[0].description}
+              />
+            </div>
+            <div>
+              {weather.weather.map((detail) => (
+                <div className="main-title" key={detail.id}>
+                  <div className="main-title__state">{detail.main}</div>
+                  <div className="main-title__detail">
+                    <span className="main-title__detailtemp">
+                      {Math.round(weather.main.temp_max)}°C
+                    </span>
+                    <span className="main-title__detaildeg">
+                      {weather?.wind?.deg}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
