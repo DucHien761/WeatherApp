@@ -23,7 +23,7 @@ function WeatherStatus() {
   };
 
   return (
-    <div className="main-status">
+    <>
       <div className="Weather-search">
         <div className="location">
           {weather.name} {weather?.sys?.country}
@@ -69,7 +69,7 @@ function WeatherStatus() {
       ) : (
         ""
       )}
-    </div>
+      </>
   );
 }
 

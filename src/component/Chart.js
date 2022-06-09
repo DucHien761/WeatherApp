@@ -94,7 +94,6 @@ const TideSunChart = () => {
   return (
     <>
       <div className="chart-title">
-        {" "}
         <span class="blue-title">Tide</span>
         <span class="orange-title">Sunrise &amp; Sunset</span>
       </div>
