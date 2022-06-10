@@ -10,17 +10,34 @@ function WeatherStatus() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState("");
 
-  const search = (evt) => {
-    if (evt.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-        .then((res) => res.json())
-        .then((result) => {
-          setQuery("");
-          setWeather(result);
-          console.log(result);
-        });
-    }
-  };
+  // const search = (evt) => {
+  //   if (evt.key === "Enter") {
+  //     fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+  //       .then((res) => res.json())
+  //       .then((result) => {
+  //         setQuery("");
+  //         setWeather(result);
+  //         console.log(result);
+  //       });
+  //   }
+  // };
+
+      const search = async(evt) => {
+        if (evt.key ==="Enter"){
+         await fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+          .then((res) => res.json())
+          .then((result) => {
+            setQuery("");
+            setWeather(result);
+            console.log(result);
+          });
+        }
+      };
+
+
+
+
+
 
   return (
     <>
@@ -40,7 +57,7 @@ function WeatherStatus() {
           />
         </div>
       </div>
-      {typeof weather.weather != "undefined" ? (
+      {typeof weather.weather != "undefined" && (
         <div className="weather-search__detail">
           <div className="weather-main">
             <div className="state-icon">
@@ -66,10 +83,8 @@ function WeatherStatus() {
             </div>
           </div>
         </div>
-      ) : (
-        ""
       )}
-      </>
+    </>
   );
 }
 
