@@ -1,7 +1,7 @@
 import { React, useContext, useEffect, useState } from "react";
 import { useAppContext } from "react";
 import axios from "axios";
-import "../styles/layout.scss";
+// import "../styles/layout.scss";
 
 import { ReferenceDataContext } from "../component/Context/ReferenceDataContext";
 

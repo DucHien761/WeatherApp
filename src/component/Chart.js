@@ -11,8 +11,6 @@ import {
   Legend,
 } from "recharts";
 
-
-
 import MoonSVG from "./UI/moonSVG";
 import SunSVG from "./UI/sunSVG";
 
