@@ -3,11 +3,11 @@ import "./App.css";
 
 import axios from "axios";
 import React, { useContext, useState } from "react";
-import WeatherStatus from "./component/WeatherStatus";
-import WeatherDetail from "./component/WeatherDetail";
-import Navigation from "./component/Header";
+import WeatherStatus from "./component/UI/WeatherStatus/WeatherStatus";
+import WeatherDetail from "./component/UI/WeatherDetail/WeatherDetail";
+import Navigation from "./component/UI/Header/Header";
 
-import TideSunChart from "./component/Chart";
+import TideSunChart from "./component/UI/Chart/Chart";
 
 
 // import "chart.js/auto";

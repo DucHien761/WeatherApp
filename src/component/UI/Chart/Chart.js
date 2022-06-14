@@ -11,8 +11,8 @@ import {
   Legend,
 } from "recharts";
 
-import MoonSVG from "./UI/moonSVG";
-import SunSVG from "./UI/sunSVG";
+import MoonSVG from "./moonSVG";
+import SunSVG from "./sunSVG";
 
 const TideSunChart = () => {
   const data = [
