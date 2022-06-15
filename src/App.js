@@ -9,21 +9,13 @@ import Navigation from "./component/UI/Header/Header";
 
 import TideSunChart from "./component/UI/Chart/Chart";
 
-
-// import "chart.js/auto";
-
 import {
   ReferenceDataContext,
   ReferenceDataContextProvider,
 } from "./component/Context/ReferenceDataContext";
 
-
-
 function App() {
-  // const lables = UserData.map((data) => data.year);
   const { weather } = useContext(ReferenceDataContext);
-
-
 
   return (
     <div className="container">
@@ -40,12 +32,12 @@ function App() {
           </ReferenceDataContextProvider>
         </div>
       </div>
-    
-    <div className="chart-layout">
-      <div className="Chart">
-        <TideSunChart/>
+
+      <div className="chart-layout">
+        <div className="Chart">
+          <TideSunChart />
+        </div>
       </div>
-    </div>
     </div>
   );
 }
