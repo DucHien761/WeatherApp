@@ -11,8 +11,7 @@ import {
 import "@testing-library/jest-dom/extend-expect";
 import WeatherStatus from "./WeatherStatus";
 
-import {screen} from '@testing-library/dom';
-
+import { screen } from "@testing-library/dom";
 
 jest.mock("axios");
 
@@ -26,20 +25,5 @@ describe("WeatherStatus", () => {
     axios.get.mockImplementationOnce(() => Promise.reject(new Error()));
 
     render(<WeatherStatus />);
-  });
-});
-
-describe("search", () => {
-  test("update when change input value", async () => {
-    const setQuery = jest.fn((value) => {});
-    const queryByPlaceholderText = () => {
-      render(<search setQuery={setQuery} />);
-    };
-
-    const searchInput = screen.getByPlaceholderText("type the city");
-
-    fireEvent.change(searchInput, { target: { value: "denver" } });
-
-    expect(searchInput.value).toBe("denver");
   });
 });
