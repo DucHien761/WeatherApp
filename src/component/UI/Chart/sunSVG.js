@@ -7,7 +7,7 @@ const SunSVG = ({cx, cy}) => {
       <svg
         x={cx - 10}
         y={cy - 10}
-        width={22}
+        width={25}
         height={20}
         version='1.1'
         id='Capa_1'

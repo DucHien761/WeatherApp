@@ -1,0 +1,25 @@
+.chart-title {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: calc(100% - 2.5rem);
+    left: 1.5rem;
+    
+    .blue-title{
+        color: $color-primary;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    .orange-title{
+        color: $color-secondary;
+        font-size: 1.8rem;
+        margin-left: 10px;
+    }
+}
+
+
+@include respond(largeTablet) {
+    overflow-y: scroll;
+  }
+  @include respond(tablet) {
+    overflow-y: scroll;
+  }

@@ -11,6 +11,7 @@ import {
   Legend,
 } from "recharts";
 
+
 import MoonSVG from "./moonSVG";
 import SunSVG from "./sunSVG";
 
@@ -84,8 +85,8 @@ const TideSunChart = () => {
   ];
   const CustomizedDot = (props) => {
     const { cx, cy, value } = props;
-    if (value > 1350 || value === 0) {
-      return <SunSVG cx={cx} cy={cy} />;
+    if (value === 0 || value > 1350 ) {
+      return <SunSVG cx={cx} cy={cy}  />;
     }
     return <MoonSVG cx={cx} cy={cy} />;
   };
@@ -95,11 +96,11 @@ const TideSunChart = () => {
         <span class="blue-title">Tide</span>
         <span class="orange-title">Sunrise &amp; Sunset</span>
       </div>
-      <ResponsiveContainer data-test="chart" width={1200} height={350}>
+      <ResponsiveContainer data-test="chart" width={1200} height={350} >
         <ComposedChart
           data={data}
           margin={{
-            top: 20,
+            top:20,
             right: 20,
             bottom: 20,
             left: 20,

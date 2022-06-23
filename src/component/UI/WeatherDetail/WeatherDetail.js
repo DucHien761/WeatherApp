@@ -23,6 +23,7 @@ function WeatherDetail() {
       return response.json();
     }
   };
+  
   useEffect(() => {
     fetchData()
       .then((res) => {
@@ -31,7 +32,7 @@ function WeatherDetail() {
       .catch((e) => {
         console.log(e.message);
       });
-  }, []);
+  },[]);
 
   return (
     <>
@@ -40,12 +41,12 @@ function WeatherDetail() {
       <div className="weather-detail">
         <div className="col-detail">
           <div className="col-detail__title-detail"> PSI</div>
-          <div className="col-detail__psi">{weather?.main?.temp_max}</div>
+          <div className="col-detail__psi">23</div>
           <div className="col-detail__status">Good</div>
         </div>
         <div className="col-detail">
           <div className="title-detail">Rain</div>
-          <div className="col-detail__deg">10{weather?.name}</div>
+          <div className="col-detail__deg">10</div>
           <div className="col-detail__status">mm</div>
         </div>
         <div className="col-detail">
