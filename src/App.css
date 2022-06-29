@@ -193,17 +193,7 @@
 }
 
 
-.Chart {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: #fff;
-  background-color: #fff;
-  position: relative;
-  max-width: 100%;
-  height: auto;
-  overflow: auto;
-  
-}
+
 
 .main-title {
   font-size: 62.5%;
@@ -461,19 +451,18 @@
 }
 
 .chart-layout {
-  font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: #fff;
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
-  position: relative;
-  overflow-y: auto;
-  height: 40%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
+    font-size: 62.5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    position: relative;
+    height: 40%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
 }
 
 
