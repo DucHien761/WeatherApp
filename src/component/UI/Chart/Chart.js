@@ -100,14 +100,14 @@ const TideSunChart = () => {
         <ComposedChart
           data={data}
           margin={{
-            top:20,
-            right: 20,
-            bottom: 20,
-            left: 20,
+            top:10,
+            right: 10,
+            bottom: 10,
+            left: 10,
           }}
         >
           <CartesianGrid stroke="#f5f5f5" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name" interval="preserveStartEnd" />
           <YAxis />
           <Tooltip />
           <Legend />
@@ -116,7 +116,7 @@ const TideSunChart = () => {
             type="monotone"
             dataKey="sun"
             stroke="#ff7300"
-            dot={<CustomizedDot />}
+            dot={<CustomizedDot/>}
           />
         </ComposedChart>
       </ResponsiveContainer>

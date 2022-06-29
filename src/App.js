@@ -19,19 +19,17 @@ function App() {
 
   return (
     <div className="container">
-      <div className="Summary">
+      
         <div className="Header">
           <Navigation />
         </div>
-        <div className="WeatherStatus">
-          <WeatherStatus />
-        </div>
-        <div className="WeatherDetail">
+        <div className="Summary">
           <ReferenceDataContextProvider>
+            <WeatherStatus />
             <WeatherDetail />
           </ReferenceDataContextProvider>
         </div>
-      </div>
+      
 
       <div className="chart-layout">
         <div className="Chart">

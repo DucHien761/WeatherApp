@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
+
+import { ReferenceDataContext } from "../../Context/ReferenceDataContext";
 
 function WeatherStatus() {
   const api = {
@@ -8,7 +10,9 @@ function WeatherStatus() {
   };
 
   const [query, setQuery] = useState("");
-  const [weather, setWeather] = useState("");
+  // const [weather, setWeather] = useState("");
+
+  const {weather, setWeather} = useContext(ReferenceDataContext);
 
   const search = async (evt) => {
     if (evt.key === "Enter") {
@@ -17,11 +21,13 @@ function WeatherStatus() {
         .then((result) => {
           setQuery("");
           setWeather(result);
+          console.log(result);
         });
     }
   };
 
   return (
+    
     <>
       <div className="Weather-search">
         <div className="location">

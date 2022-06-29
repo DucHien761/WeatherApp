@@ -46,7 +46,6 @@ span {
 
 .heading {
   text-align: right;
-  /* media queries */
   @media (max-width: 767px) {
     text-align: center;
   }
